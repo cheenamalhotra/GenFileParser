@@ -1,13 +1,13 @@
-package com.cheenam.fileParser;
+package test.java.com.cheenam.fileParser;
 
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import com.cheenam.fileParser.ExcelCSVParser.RowExtractor;
-
 import junit.framework.TestCase;
+import main.java.com.cheenam.fileParser.ExcelCSVParser;
+import main.java.com.cheenam.fileParser.ExcelCSVParser.RowExtractor;
 
 public class ExcelCSVParserTest extends TestCase {
 
