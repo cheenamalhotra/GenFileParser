@@ -1,4 +1,4 @@
-package main.java.com.cheenam.fileParser;
+package com.cheenam.fileParser;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;

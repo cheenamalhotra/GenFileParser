@@ -1,13 +1,13 @@
-package test.java.com.cheenam.fileParser;
+package com.cheenam.fileParser;
 
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import com.cheenam.fileParser.ExcelCSVParser.RowExtractor;
+
 import junit.framework.TestCase;
-import main.java.com.cheenam.fileParser.ExcelCSVParser;
-import main.java.com.cheenam.fileParser.ExcelCSVParser.RowExtractor;
 
 public class ExcelCSVParserTest extends TestCase {
 
@@ -56,21 +56,21 @@ public class ExcelCSVParserTest extends TestCase {
 		ExcelCSVParser<Country> reader = ExcelCSVParser.builder(Country.class).converter(converter).csvDelimiter(',')
 				.sheets(1).build();
 
-		delta(() -> reader.read("src/test/resources/Countries.xlsx"));
-		delta(() -> reader.read("src/test/resources/Countries.csv"));
+		delta(() -> reader.read("test/resources/Countries.xlsx"));
+		delta(() -> reader.read("test/resources/Countries.csv"));
 	}
 
 	@Test
 	public void testShouldParseCorrectly_GivenCsvFile() throws Exception {
 		List<Country> list;
-		list = reader.read("src/test/resources/Countries.csv");
+		list = reader.read("test/resources/Countries.csv");
 		checkList(list);
 	}
 
 	@Test
 	public void testShouldParseCorrectly_GivenXlsxFile() throws Exception {
 		List<Country> list;
-		list = reader.read("src/test/resources/Countries.xlsx");
+		list = reader.read("test/resources/Countries.xlsx");
 		checkList(list);
 	}
 }
