@@ -9,6 +9,6 @@ Currently Supported:
 - .XLSX
 - .XLS
 
-Upcoming:
+Upcoming soon:
 - .XML
 - .JSON
